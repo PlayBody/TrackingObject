@@ -17,7 +17,7 @@ basedir = os.path.dirname(__file__)
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
-    app.setWindowIcon(QtGui.QIcon(os.path.join(basedir, 'resource/logo.ico')))
+    app.setWindowIcon(QtGui.QIcon(os.path.join(basedir, 'resources/logo.ico')))
     window = MainWindow()
     window.show()
     app.exec()
