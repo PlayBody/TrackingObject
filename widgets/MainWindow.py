@@ -16,6 +16,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def btnLoadClicked(self):
         [path, ext] = QtWidgets.QFileDialog.getOpenFileName(self, "Open Video", "D:\\Workspace\\Work\\OpenCV\\", "*.mp4")
         loops = trackEngine.run(path)
-        text = json.dumps(loops, indent=2)
+        text = json.dumps(loops, indent=1)
         self.EDIT_LOG.setPlainText(text)
 

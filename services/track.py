@@ -47,7 +47,7 @@ class TrackEngine:
                 ny = y + h/2
 
                 score = 1e9
-                if prevBoxes.count() > 0:
+                if len(prevBoxes) > 0:
                     for prev in prevBoxes:
                         nscore = math.hypot(prev[0] - nx, prev[1] - ny)
                         if nscore < score:
@@ -56,7 +56,7 @@ class TrackEngine:
                 boxes.append([nx, ny, score])
                 cv2.rectangle(frame, (x,y), (x+w,y+h), (0, 255, 0), 2)
             
-            if boxes.count() > 0:
+            if len(boxes) > 0:
                 prevBoxes = boxes
             trackArray.append(boxes)
             # Display output  
