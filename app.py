@@ -1,9 +1,9 @@
 import sys, os
-from service.track import TrackEngine
+from services.track import TrackEngine
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6 import uic
 
-from widget.MainWindow import MainWindow
+from widgets.MainWindow import MainWindow
 
 try:
     from ctypes import windll  # Only exists on Windows.
